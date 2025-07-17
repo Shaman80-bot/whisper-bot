@@ -32,8 +32,8 @@ def handle_audio(message):
     )
     if response.status_code == 200:
         result = response.json()['text']
-        bot.reply_to(message, f"📝 Расшифровка: {result}")
+        bot.reply_to(message, f" Расшифровка:\n{result}")
     else:
-        bot.reply_to(message, f"❌ Ошибка: {response.text}")
+        bot.reply_to(message, f" Ошибка: {response.text}")
 
 bot.infinity_polling()
