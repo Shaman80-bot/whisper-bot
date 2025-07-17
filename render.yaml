@@ -1,0 +1,12 @@
+
+services:
+  - type: web
+    name: whisper-transcriber-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: 8027065861:AAGIIFQx6EUpxKQvdvOJZzSfxsqrM-TmyO0
+      - key: OPENAI_API_KEY
+        value: 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
